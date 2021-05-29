@@ -42,17 +42,9 @@
 
                         <div class="form-group row">
                             <label for="group_id" class="col-md-4 col-form-label text-md-right">{{ __('Group') }}</label>
-                            <div class="col-md-6">                     
-                                <select id="group_id" class="form-control @error('group_id') is-invalid @enderror" name="group_id" value="{{ old('group_id', $meeting->group_id) }}"  required>
-                                    @foreach($groups as $group)
-                                     <option value="{{ $group->id }}" {{ old('group_id') == $group->id ? 'selected' : '' }}>{{ $group->topic }}</option>
-                                    @endforeach
-                                </select>
-                                @error('group_id')
-                                    <span class="invalid-feedback" role="alert">
-                                         <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
+                            <div class="col-md-6">
+                                <label for="group_id" class="form-control">{{ $meeting->group->topic }}</label>
                             </div>
                         </div>
 

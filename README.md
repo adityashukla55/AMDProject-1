@@ -7,7 +7,7 @@
 3. Set database name as->  amdproject
 4. php artisan migrate:fresh --seed
 5. php artisan serve
-6. localhost:8005
+6. http://127.0.0.1:8005/
 
 - [Laravel 8 user roles and permission](https://www.itsolutionstuff.com/postlaravel-8-user-roles-and-permissions-tutorialexample.html).
 - [Installing laravel wth postgresql](https://www.enterprisedb.com/postgres-tutorials/how-use-postgresql-laravel).

@@ -57,17 +57,11 @@ class JoingroupController extends Controller
 
             // dd(Auth::user()->id);
 
-            DB::table('group_user')->insert([
-                'group_id' => $request->group_id,
-                'user_id' => Auth::user()->id,
-                'joined' => '1'
-            ]);
-
-            // $data = new Groupuser;
-            // $data->group_id = $request->group_id;
-            // $data->user_id = auth()->user()->id;
-            // $data->joined = '1';
-            // $data->save();
+            $data = new Groupuser;
+            $data->group_id = $request->group_id;
+            $data->user_id = auth()->user()->id;
+            $data->joined = '1';
+            $data->save();
 
             DB::table('groups')->where('id', $request->group_id)->increment('filled',1);    
         }

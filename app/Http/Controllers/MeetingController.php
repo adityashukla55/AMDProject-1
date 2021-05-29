@@ -130,7 +130,6 @@ class MeetingController extends Controller
         $request->validate([
             'name' => 'required|string|max:25',
             'location' => 'required|string',
-            'group_id' => 'required',
             'start_time'=> "required|date|after_or_equal:$date",
             'end_time' => 'required|date|after:start_time',
         ]);
